@@ -1,0 +1,31 @@
+on: [push]
+
+jobs:
+  gist-sync:
+    name: gist-sync
+    runs-on: ubuntu-latest
+    steps:
+    #PIC18F4550
+      - name: Checkout
+        uses: actions/checkout@v2
+      - uses: vhperaltaj/gist-sync-action@v1.0.0
+        id: PIC18F4550
+        with:
+          auth: ${{ secrets.GIST_TOKEN }}
+          gist_url: https://gist.github.com/microside-mx/4d41ab33c758db575b3dc28cf548a84a
+          gist_title: Práctica-8 LED RGB 4550-MikroC.c
+          gist_description: Prácticas MikroC Pro for PIC
+          github_file: Proyecto/4550/PWM2.c
+          file_encoding: WINDOWS-1252
+    #PIC18F45K50
+      - name: Checkout
+        uses: actions/checkout@v2
+      - uses: vhperaltaj/gist-sync-action@v1.0.0
+        id: PIC18F45K50
+        with:
+          auth: ${{ secrets.GIST_TOKEN }}
+          gist_url: https://gist.github.com/microside-mx/437579178d0ae0ecf27c2679e6060552
+          gist_title: Práctica-8 LED RGB 45K50-MikroC.c
+          gist_description: Prácticas MikroC Pro for PIC
+          github_file: Proyecto/45K50/PWM2.c
+          file_encoding: WINDOWS-1252
