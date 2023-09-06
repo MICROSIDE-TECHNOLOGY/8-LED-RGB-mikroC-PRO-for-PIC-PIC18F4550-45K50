@@ -8,7 +8,7 @@ Driver Version    :  1.0
 ********************************************************************************/
 
 /*******************************************************************************
-Para usar el cï¿½digo con bootloader, configurar como lo indica MICROSIDE:
+Para usar el código con bootloader, configurar como lo indica MICROSIDE:
 1) Tools> Options> Output> Output Settings> Marcar "Long HEX format"
 2) Project> Edit Project> Insertar 48.000000 en "MCU Clock Frequency [MHz]" box
 ********************************************************************************/
@@ -50,18 +50,18 @@ void main() org 0x2000             // vector de inicio usando bootloader MICROSI
         LEDR = 1;
         LEDA = 0;
         LEDV = 0;
-        Set_PWM();                 // Convocamos la funciï¿½n para generar un PWM
+        Set_PWM();                 // Convocamos la función para generar un PWM
       
         LEDR = 0;
         LEDA = 0;
         LEDV = 1;
-        Set_PWM();                 // Convocamos la funciï¿½n para generar un PWM
+        Set_PWM();                 // Convocamos la función para generar un PWM
 
 
         LEDA = 1;
         LEDR = 0;
         LEDV = 0;
-        Set_PWM();                  // Convocamos la funciï¿½n para generar un PWM
+        Set_PWM();                  // Convocamos la función para generar un PWM
 
    }
 }
